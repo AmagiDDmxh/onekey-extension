@@ -7,7 +7,7 @@ on:
       - staging
 
 jobs:
-  gh_tagged_release:
+  staging-prerelease:
     runs-on: 'ubuntu-latest'
 
     steps:
