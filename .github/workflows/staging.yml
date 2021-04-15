@@ -1,5 +1,5 @@
 ---
-name: "stagin-prerelease"
+name: "staging-prerelease"
 
 on:
   push:
@@ -32,13 +32,13 @@ jobs:
         run: "yarn install --frozen-lockfile"
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          
+
       - name: Linting
         run: "yarn lint"
-      
+
       - name: Test
         run: "yarn test"
-      
+
       - name: Building Production
         run: "yarn dist"
 
