@@ -3,8 +3,8 @@ name: 'staging-prerelease'
 
 on:
   push:
-    tags:
-      - 'v*.*.*-beta-?*'
+    branches:
+      - "staging"
 
 jobs:
   staging-prerelease:
