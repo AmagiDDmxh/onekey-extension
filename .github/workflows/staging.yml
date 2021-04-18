@@ -35,9 +35,12 @@ jobs:
         with:
           path: 'node_modules'
           key: ${{ runner.os }}-yarn-node-modules${{ hashFiles('**/yarn.lock') }}
+          
+#       - name: Linting
+#         run: 'yarn lint'
 
       - name: Install Dependiences
-        run: 'yarn install --frozen-lockfile'
+        run: 'yarn install --frozen-lockfile && yarn allow-scripts'
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
