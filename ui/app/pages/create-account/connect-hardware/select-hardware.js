@@ -98,8 +98,7 @@ export default class SelectHardware extends Component {
     };
 
     const text = this.context.t('orderOneHere');
-    const response = text
-      .replace('Onekey', links.trezor)
+    const response = text.replace('Onekey', links.trezor);
 
     return (
       <div

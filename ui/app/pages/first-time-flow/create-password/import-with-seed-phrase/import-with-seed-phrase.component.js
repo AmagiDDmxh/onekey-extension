@@ -231,7 +231,8 @@ export default class ImportWithSeedPhrase extends PureComponent {
             }}
             href="#"
           >
-            <span>&lt; </span><span>{t('back')}</span>
+            <span>&lt; </span>
+            <span>{t('back')}</span>
           </a>
         </div>
         <div className="first-time-flow__header">
@@ -257,9 +258,7 @@ export default class ImportWithSeedPhrase extends PureComponent {
             />
           )}
           {seedPhraseError && <span className="error">{seedPhraseError}</span>}
-          <div
-            className="first-time-flow__checkbox-container"
-          >
+          <div className="first-time-flow__checkbox-container">
             <div
               className="first-time-flow__checkbox"
               tabIndex="0"
@@ -304,9 +303,7 @@ export default class ImportWithSeedPhrase extends PureComponent {
           margin="normal"
           largeLabel
         />
-        <div
-          className="first-time-flow__checkbox-container"
-        >
+        <div className="first-time-flow__checkbox-container">
           <div
             className="first-time-flow__checkbox first-time-flow__terms"
             tabIndex="0"

@@ -1,4 +1,4 @@
-import EventEmitter from 'events';
+// import EventEmitter from 'events';
 import React, { useState, useEffect, useRef, useContext } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import PropTypes from 'prop-types';
@@ -12,7 +12,7 @@ import {
 } from '../../../ducks/swaps/swaps';
 import { I18nContext } from '../../../contexts/i18n';
 import { MetaMetricsContext } from '../../../contexts/metametrics.new';
-import Mascot from '../../../components/ui/mascot';
+// import Mascot from '../../../components/ui/mascot';
 import SwapsFooter from '../swaps-footer';
 import BackgroundAnimation from './background-animation';
 import AggregatorLogo from './aggregator-logo';
@@ -38,21 +38,21 @@ function getRandomLocations(numberOfLocations) {
   return [...randomLocations, ...getRandomLocations(numberOfExtraLocations)];
 }
 
-function getMascotTarget(aggregatorName, centerPoint, aggregatorLocationMap) {
-  const location = aggregatorLocationMap[aggregatorName];
+// function getMascotTarget(aggregatorName, centerPoint, aggregatorLocationMap) {
+//   const location = aggregatorLocationMap[aggregatorName];
 
-  if (!location || !centerPoint) {
-    return centerPoint ?? {};
-  }
+//   if (!location || !centerPoint) {
+//     return centerPoint ?? {};
+//   }
 
-  // The aggregator logos are 94px x 40px. For the fox to look at the center of each logo, the target needs to be
-  // the coordinates for the centre point of the fox + the desired top and left coordinates of the logo + half
-  // the height and width of the logo.
-  return {
-    x: location.x + centerPoint.x + 47,
-    y: location.y + centerPoint.y + 20,
-  };
-}
+//   // The aggregator logos are 94px x 40px. For the fox to look at the center of each logo, the target needs to be
+//   // the coordinates for the centre point of the fox + the desired top and left coordinates of the logo + half
+//   // the height and width of the logo.
+//   return {
+//     x: location.x + centerPoint.x + 47,
+//     y: location.y + centerPoint.y + 20,
+//   };
+// }
 
 export default function LoadingSwapsQuotes({
   aggregatorMetadata,
@@ -63,7 +63,7 @@ export default function LoadingSwapsQuotes({
   const metaMetricsEvent = useContext(MetaMetricsContext);
   const dispatch = useDispatch();
   const history = useHistory();
-  const animationEventEmitter = useRef(new EventEmitter());
+  // const animationEventEmitter = useRef(new EventEmitter());
 
   const fetchParams = useSelector(getFetchParams);
   const quotesFetchStartTime = useSelector(getQuotesFetchStartTime);
@@ -186,7 +186,10 @@ export default function LoadingSwapsQuotes({
             className="loading-swaps-quotes__mascot-container"
             ref={mascotContainer}
           >
-            <img src="./images/logo/metamask-fox.svg" style={{ width: '90px', height: '90px' }}></img>
+            <img
+              src="./images/logo/metamask-fox.svg"
+              style={{ width: '90px', height: '90px' }}
+            />
             {/* <Mascot
               animationEventEmitter={animationEventEmitter.current}
               width="90"

@@ -594,11 +594,11 @@ describe('Actions', function () {
       actions._setBackgroundConnection(background);
 
       await store.dispatch(
-        actions.unlockHardwareWalletAccount(
+        actions.unlockHardwareWalletAccounts(
+          [0],
           'ledger',
-          0,
           `m/44'/60'/0'/0`,
-          ""
+          '',
         ),
       );
       assert(unlockHardwareWalletAccount.calledOnce);

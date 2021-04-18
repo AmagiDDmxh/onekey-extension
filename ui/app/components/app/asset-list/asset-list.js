@@ -13,7 +13,7 @@ import {
   getCurrentAccountWithSendEtherInfo,
   getNativeCurrency,
   getShouldShowFiat,
-  getEtherLogo
+  getEtherLogo,
 } from '../../../selectors';
 import { useCurrencyDisplay } from '../../../hooks/useCurrencyDisplay';
 

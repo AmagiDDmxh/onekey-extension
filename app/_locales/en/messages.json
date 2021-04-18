@@ -52,6 +52,21 @@
   "addAlias": {
     "message": "Add alias"
   },
+  "addEthereumChainConfirmationDescription": {
+    "message": "This will allow this network to be used within OneKey."
+  },
+  "addEthereumChainConfirmationRisks": {
+    "message": "OneKey does not verify custom networks."
+  },
+  "addEthereumChainConfirmationRisksLearnMore": {
+    "message": "Learn about $1."
+  },
+  "addEthereumChainConfirmationRisksLearnMoreLink": {
+    "message": "scams and network security risks"
+  },
+  "addEthereumChainConfirmationTitle": {
+    "message": "Allow this site to add a network?"
+  },
   "addNetwork": {
     "message": "Add Network"
   },
@@ -150,6 +165,9 @@
   "approve": {
     "message": "Approve spend limit"
   },
+  "approveButtonText": {
+    "message": "Approve"
+  },
   "approveSpendLimit": {
     "message": "Approve $1 spend limit",
     "description": "The token symbol that is being approved"
@@ -214,6 +232,9 @@
   "blockExplorerUrl": {
     "message": "Block Explorer"
   },
+  "blockExplorerUrlDefinition": {
+    "message": "The URL used as the block explorer for this network."
+  },
   "blockExplorerView": {
     "message": "View account at $1",
     "description": "$1 replaced by URL for custom block explorer"
@@ -224,11 +245,11 @@
   "browserNotSupported": {
     "message": "Your Browser is not supported..."
   },
+  "bsc": {
+    "message": "BSC Mainnet"
+  },
   "builtInCalifornia": {
     "message": "OneKey is designed and built in Beijing."
-  },
-  "thankToMetaMask": {
-    "message": "Powered by MetaMask Source Code"
   },
   "buy": {
     "message": "Buy"
@@ -256,6 +277,9 @@
   },
   "chainId": {
     "message": "Chain ID"
+  },
+  "chainIdDefinition": {
+    "message": "The chain ID used to sign transactions for this network."
   },
   "chromeRequiredForHardwareWallets": {
     "message": "You need to use OneKey on Google Chrome in order to connect to your Hardware Wallet."
@@ -343,8 +367,14 @@
   "connectingTo": {
     "message": "Connecting to $1"
   },
+  "connectingToBsc": {
+    "message": "Connecting to Bsc Mainnet"
+  },
   "connectingToGoerli": {
     "message": "Connecting to Goerli Test Network"
+  },
+  "connectingToHeco": {
+    "message": "Connecting to Heco Mainnet"
   },
   "connectingToKovan": {
     "message": "Connecting to Kovan Test Network"
@@ -352,20 +382,14 @@
   "connectingToMainnet": {
     "message": "Connecting to Ethereum Mainnet"
   },
+  "connectingToMatic": {
+    "message": "Connecting to Matic Mainnet"
+  },
   "connectingToRinkeby": {
     "message": "Connecting to Rinkeby Test Network"
   },
   "connectingToRopsten": {
     "message": "Connecting to Ropsten Test Network"
-  },
-  "connectingToBsc": {
-    "message": "Connecting to Bsc Mainnet"
-  },
-  "connectingToMatic": {
-    "message": "Connecting to Matic Mainnet"
-  },
-  "connectingToHeco": {
-    "message": "Connecting to Heco Mainnet"
   },
   "contactUs": {
     "message": "Contact us"
@@ -420,6 +444,12 @@
   },
   "currencyConversion": {
     "message": "Currency Conversion"
+  },
+  "currencySymbol": {
+    "message": "Currency Symbol"
+  },
+  "currencySymbolDefinition": {
+    "message": "The ticker symbol displayed for this network’s currency."
   },
   "currentAccountNotConnected": {
     "message": "Your current account is not connected"
@@ -778,6 +808,10 @@
   "hardwareWalletConnected": {
     "message": "Hardware wallet connected"
   },
+  "hardwareWalletLegacyDescription": {
+    "message": "(legacy)",
+    "description": "Text representing the MEW path"
+  },
   "hardwareWallets": {
     "message": "Connect a hardware wallet"
   },
@@ -786,6 +820,9 @@
   },
   "havingTroubleConnecting": {
     "message": "Having trouble connecting?"
+  },
+  "heco": {
+    "message": "Heco Mainnet"
   },
   "here": {
     "message": "here",
@@ -956,6 +993,9 @@
   "mainnet": {
     "message": "Ethereum Mainnet"
   },
+  "matic": {
+    "message": "Matic Mainnet"
+  },
   "max": {
     "message": "Max"
   },
@@ -1042,14 +1082,26 @@
   "negativeETH": {
     "message": "Can not send negative amounts of ETH."
   },
+  "networkDetails": {
+    "message": "Network Details"
+  },
   "networkName": {
     "message": "Network Name"
+  },
+  "networkNameDefinition": {
+    "message": "The name associated with this network."
   },
   "networkSettingsChainIdDescription": {
     "message": "The chain ID is used for signing transactions. It must match the chain ID returned by the network. You can enter a decimal or '0x'-prefixed hexadecimal number, but we will display the number in decimal."
   },
   "networkSettingsDescription": {
     "message": "Add and edit custom RPC networks"
+  },
+  "networkURL": {
+    "message": "Network URL"
+  },
+  "networkURLDefinition": {
+    "message": "The URL used to access this network."
   },
   "networks": {
     "message": "Networks"
@@ -1134,6 +1186,9 @@
   "notEnoughGas": {
     "message": "Not Enough Gas"
   },
+  "notUseHardware": {
+    "message": "Do not import Mnemonic Phrase from OneKey Hardware Device"
+  },
   "ofTextNofM": {
     "message": "of"
   },
@@ -1173,6 +1228,9 @@
   },
   "origin": {
     "message": "Origin"
+  },
+  "ownedOnekey": {
+    "message": "Have already owned Onekey hardware devices"
   },
   "parameters": {
     "message": "Parameters"
@@ -1426,6 +1484,9 @@
   },
   "selectAnAccount": {
     "message": "Select an Account"
+  },
+  "selectAnAccountAlreadyConnected": {
+    "message": "This account has already been connected to MetaMask"
   },
   "selectAnAccountHelp": {
     "message": "Select the account to view in OneKey"
@@ -1904,11 +1965,23 @@
   "swapsViewInActivity": {
     "message": "View in activity"
   },
+  "switchEthereumChainConfirmationDescription": {
+    "message": "This will switch the selected network within OneKey to a previously added network:"
+  },
+  "switchEthereumChainConfirmationTitle": {
+    "message": "Allow this site to switch the network?"
+  },
+  "switchNetwork": {
+    "message": "Switch network"
+  },
   "switchNetworks": {
     "message": "Switch Networks"
   },
   "switchToThisAccount": {
     "message": "Switch to this account"
+  },
+  "switchingNetworksCancelsPendingConfirmations": {
+    "message": "Switching networks will cancel all pending confirmations"
   },
   "symbol": {
     "message": "Symbol"
@@ -1954,6 +2027,9 @@
   },
   "testFaucet": {
     "message": "Test Faucet"
+  },
+  "thankToMetaMask": {
+    "message": "Powered by MetaMask Source Code"
   },
   "thisWillCreate": {
     "message": "This will create a new wallet and seed phrase"
@@ -2171,81 +2247,5 @@
   },
   "zeroGasPriceOnSpeedUpError": {
     "message": "Zero gas price on speed up"
-  },
-  "heco": {
-    "message": "Heco Mainnet"
-  },
-  "bsc": {
-    "message": "BSC Mainnet"
-  },
-  "ownedOnekey": {
-    "message": "Have already owned Onekey hardware devices"
-  },
-  "matic": {
-    "message": "Matic Mainnet"
-  },
-  "addEthereumChainConfirmationTitle": {
-    "message": "Allow this site to add a network?"
-  },
-  "addEthereumChainConfirmationDescription": {
-    "message": "This will allow this network to be used within OneKey."
-  },
-  "addEthereumChainConfirmationRisks": {
-    "message": "OneKey does not verify custom networks."
-  },
-  "addEthereumChainConfirmationRisksLearnMore": {
-    "message": "Learn about $1."
-  },
-  "addEthereumChainConfirmationRisksLearnMoreLink": {
-    "message": "scams and network security risks"
-  },
-  "networkDetails": {
-    "message": "Network Details"
-  },
-  "networkNameDefinition": {
-    "message": "The name associated with this network."
-  },
-  "networkURL": {
-    "message": "Network URL"
-  },
-  "networkURLDefinition": {
-    "message": "The URL used to access this network."
-  },
-  "chainIdDefinition": {
-    "message": "The chain ID used to sign transactions for this network."
-  },
-  "currencySymbol": {
-    "message": "Currency Symbol"
-  },
-  "currencySymbolDefinition": {
-    "message": "The ticker symbol displayed for this network’s currency."
-  },
-  "blockExplorerUrlDefinition": {
-    "message": "The URL used as the block explorer for this network."
-  },
-  "approveButtonText": {
-    "message": "Approve"
-  },
-  "switchEthereumChainConfirmationTitle": {
-    "message": "Allow this site to switch the network?"
-  },
-  "switchEthereumChainConfirmationDescription": {
-    "message": "This will switch the selected network within OneKey to a previously added network:"
-  },
-  "switchNetwork": {
-    "message": "Switch network"
-  },
-  "switchingNetworksCancelsPendingConfirmations": {
-    "message": "Switching networks will cancel all pending confirmations"
-  },
-  "hardwareWalletLegacyDescription": {
-    "message": "(legacy)",
-    "description": "Text representing the MEW path"
-  },
-  "selectAnAccountAlreadyConnected": {
-    "message": "This account has already been connected to MetaMask"
-  },
-  "notUseHardware": {
-    "message": "Do not import Mnemonic Phrase from OneKey Hardware Device"
   }
 }

@@ -14,7 +14,7 @@ export const I18nProvider = (props) => {
   const currentLocale = useSelector(getCurrentLocale);
   const current = useSelector(getCurrentLocaleMessages);
   const defaultLocale = useSelector(getDefaultLocaleMessages);
-  
+
   const t = useMemo(() => {
     return (key, ...args) =>
       getMessage(currentLocale, current, key, ...args) ||

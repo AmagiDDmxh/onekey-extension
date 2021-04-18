@@ -86,19 +86,18 @@ export async function getMethodDataAsync(fourBytePrefix) {
 
     const parsedResult = registry.parse(sig);
 
-    // fix bad methodName 
-    let parts = parsedResult.name.split(" ");
+    // fix bad methodName
+    let parts = parsedResult.name.split(' ');
     parts = parts.reduce((result, cur) => {
-      if (result[0] && /^[A-Z]+$/.test(result[0]) && /^[A-Z]{1}$/.test(cur)) {
-        result[0] += cur
-        return result
-      } else {
-        return [cur].concat(result)
+      if (result[0] && /^[A-Z]+$/u.test(result[0]) && /^[A-Z]{1}$/u.test(cur)) {
+        result[0] += cur;
+        return result;
       }
-    }, [])
+      return [cur].concat(result);
+    }, []);
 
     return {
-      name: parts.reverse().join(" "),
+      name: parts.reverse().join(' '),
       params: parsedResult.args,
     };
   } catch (error) {
@@ -212,7 +211,7 @@ export function getBlockExplorerUrlForTx(networkId, hash, rpcPrefs = {}) {
   if (rpcPrefs.blockExplorerUrl) {
     return `${rpcPrefs.blockExplorerUrl.replace(/\/+$/u, '')}/tx/${hash}`;
   }
-  switch (+networkId) {
+  switch (Number(networkId)) {
     case 1: // main net
       return `https://etherscan.io/tx/${hash}`;
     case 2: // morden test net

@@ -22,7 +22,7 @@ export default class Identicon extends PureComponent {
     image: PropTypes.string,
     useBlockie: PropTypes.bool,
     alt: PropTypes.string,
-    coinLogo: PropTypes.string
+    ethLogo: PropTypes.string,
   };
 
   static defaultProps = {
@@ -33,7 +33,7 @@ export default class Identicon extends PureComponent {
     image: undefined,
     useBlockie: false,
     alt: '',
-    ethLogo: './images/eth_logo.svg'
+    ethLogo: './images/eth_logo.svg',
   };
 
   renderImage() {
@@ -85,7 +85,7 @@ export default class Identicon extends PureComponent {
       useBlockie,
       addBorder,
       alt,
-      ethLogo
+      ethLogo,
     } = this.props;
 
     if (image) {

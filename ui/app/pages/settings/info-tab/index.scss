@@ -53,9 +53,10 @@
     background-color: $alto;
     color: $alto;
   }
-  
+
   &__thank {
     @include H6;
+
     padding-top: 5px;
     color: $dusty-gray;
   }

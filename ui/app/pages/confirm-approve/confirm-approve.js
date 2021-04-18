@@ -47,7 +47,7 @@ export default function ConfirmApprove() {
   const currentToken = (tokens &&
     tokens.find(({ address }) => tokenAddress === address)) || {
     address: tokenAddress,
-    symbol: ""
+    symbol: '',
   };
 
   const { tokensWithBalances } = useTokenTracker([currentToken]);

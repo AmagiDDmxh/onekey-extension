@@ -26,7 +26,7 @@ import {
   AWAITING_SWAP_ROUTE,
   BUILD_QUOTE_ROUTE,
   VIEW_QUOTE_ROUTE,
-  CONFIRMATION_V_NEXT_ROUTE
+  CONFIRMATION_V_NEXT_ROUTE,
 } from '../../helpers/constants/routes';
 
 const LEARN_MORE_URL =
@@ -61,17 +61,19 @@ export default class Home extends PureComponent {
     connectedStatusPopoverHasBeenShown: PropTypes.bool,
     defaultHomeActiveTabName: PropTypes.string,
     onTabClick: PropTypes.func.isRequired,
-    setSwapsWelcomeMessageHasBeenShown: PropTypes.func.isRequired,
-    swapsWelcomeMessageHasBeenShown: PropTypes.bool.isRequired,
+    // Used for initial swap popup intro
+    // setSwapsWelcomeMessageHasBeenShown: PropTypes.func.isRequired,
+    // swapsWelcomeMessageHasBeenShown: PropTypes.bool.isRequired,
+    // swapsEnabled: PropTypes.bool,
+    // isMainnet: PropTypes.bool,
     haveSwapsQuotes: PropTypes.bool.isRequired,
     showAwaitingSwapScreen: PropTypes.bool.isRequired,
     swapsFetchParams: PropTypes.object,
-    swapsEnabled: PropTypes.bool,
-    isMainnet: PropTypes.bool,
     shouldShowWeb3ShimUsageNotification: PropTypes.bool.isRequired,
     setWeb3ShimUsageAlertDismissed: PropTypes.func.isRequired,
     originOfCurrentTab: PropTypes.string,
     disableWeb3ShimUsageAlert: PropTypes.func.isRequired,
+    pendingApprovals: PropTypes.arrayOf(PropTypes.object).isRequired,
   };
 
   state = {
@@ -89,7 +91,7 @@ export default class Home extends PureComponent {
       haveSwapsQuotes,
       showAwaitingSwapScreen,
       swapsFetchParams,
-      pendingApprovals
+      pendingApprovals,
     } = this.props;
 
     this.setState({ mounted: true });
@@ -294,10 +296,11 @@ export default class Home extends PureComponent {
       history,
       connectedStatusPopoverHasBeenShown,
       isPopup,
-      swapsWelcomeMessageHasBeenShown,
-      setSwapsWelcomeMessageHasBeenShown,
-      swapsEnabled,
-      isMainnet,
+      // These vars are use for initial popup intro
+      // swapsWelcomeMessageHasBeenShown,
+      // setSwapsWelcomeMessageHasBeenShown,
+      // swapsEnabled,
+      // isMainnet,
     } = this.props;
 
     if (forgottenPassword) {

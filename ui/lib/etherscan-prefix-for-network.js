@@ -26,7 +26,7 @@ export function getEtherscanNetwork(networkId, rpcPrefs = {}) {
   if (rpcPrefs.blockExplorerUrl) {
     return `${rpcPrefs.blockExplorerUrl.replace(/\/+$/u, '')}`;
   }
-  switch (+networkId) {
+  switch (Number(networkId)) {
     case 1: // main net
       return `https://etherscan.io`;
     case 2: // morden test net

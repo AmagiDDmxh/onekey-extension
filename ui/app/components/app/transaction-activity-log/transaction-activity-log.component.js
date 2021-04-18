@@ -27,6 +27,7 @@ export default class TransactionActivityLog extends PureComponent {
     onRetry: PropTypes.func,
     primaryTransaction: PropTypes.object,
     isEarliestNonce: PropTypes.bool,
+    rpcPrefs: PropTypes.object,
   };
 
   handleActivityClick = (hash) => {

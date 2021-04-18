@@ -161,7 +161,8 @@ export default class NewAccount extends PureComponent {
             }}
             href="#"
           >
-            <span>&lt; </span><span>{t('back')}</span>
+            <span>&lt; </span>
+            <span>{t('back')}</span>
           </a>
         </div>
         <div className="first-time-flow__header">{t('createPassword')}</div>
@@ -195,9 +196,7 @@ export default class NewAccount extends PureComponent {
             fullWidth
             largeLabel
           />
-          <div
-            className="first-time-flow__checkbox-container"
-          >
+          <div className="first-time-flow__checkbox-container">
             <div
               className="first-time-flow__checkbox"
               tabIndex="0"

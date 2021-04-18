@@ -56,8 +56,7 @@ export default class LoadingNetworkScreen extends PureComponent {
       name = this.context.t('connectingToBsc');
     } else if (providerName === 'matic') {
       name = this.context.t('connectingToMatic');
-    }  
-    else {
+    } else {
       name = this.context.t('connectingTo', [providerId]);
     }
 

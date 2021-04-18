@@ -6,14 +6,14 @@ import {
   TEST_CHAINS,
   NETWORK_TYPE_RPC,
   NETWORK_TYPE_TO_ID_MAP,
-  BUILDINT_PROVIDER_TYPES
+  BUILDINT_PROVIDER_TYPES,
 } from '../../../shared/constants/network';
 import {
   shortenAddress,
   checksumAddress,
   getAccountByAddress,
 } from '../helpers/utils/util';
-import { contractMap } from "../../tokens"
+import { contractMap } from '../../tokens';
 import { getPermissionsRequestCount } from './permissions';
 
 export function getNetworkIdentifier(state) {
@@ -157,10 +157,10 @@ export const getMetaMaskAccountsConnected = createSelector(
 );
 
 export function isBalanceCached(state) {
-  const selectedAccount = state.metamask.accounts[getSelectedAddress(state)]
+  const selectedAccount = state.metamask.accounts[getSelectedAddress(state)];
   const selectedAccountBalance = selectedAccount && selectedAccount.balance;
   const cachedBalance = getSelectedAccountCachedBalance(state);
-  
+
   return Boolean(!selectedAccountBalance && cachedBalance);
 }
 
@@ -192,8 +192,8 @@ export function getAssetImages(state) {
 }
 
 export function getContractMap(state) {
-  const type = state.metamask.provider.type;
-  return contractMap[type] ? contractMap[type] : contractMap.eth
+  const { type } = state.metamask.provider;
+  return contractMap[type] ? contractMap[type] : contractMap.eth;
 }
 
 export function getAddressBook(state) {
@@ -335,8 +335,11 @@ export function getProvider(state) {
 }
 
 export function getEtherLogo(state) {
-  const type = state.metamask.provider.type;
-  return (NETWORK_TYPE_TO_ID_MAP[type] && NETWORK_TYPE_TO_ID_MAP[type].image) || "./images/eth_logo.svg"
+  const { type } = state.metamask.provider;
+  return (
+    (NETWORK_TYPE_TO_ID_MAP[type] && NETWORK_TYPE_TO_ID_MAP[type].image) ||
+    './images/eth_logo.svg'
+  );
 }
 
 export function getAdvancedInlineGasShown(state) {

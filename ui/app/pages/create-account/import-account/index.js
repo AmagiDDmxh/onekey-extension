@@ -48,8 +48,7 @@ export default class AccountImportSubview extends Component {
             }}
             onClick={() => {
               global.platform.openTab({
-                url:
-                  'https://help.onekey.so',
+                url: 'https://help.onekey.so',
               });
             }}
           >

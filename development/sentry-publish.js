@@ -52,9 +52,7 @@ async function start() {
 
 async function checkIfAuthWorks() {
   const itWorked = await doesNotFail(async () => {
-    await exec(
-      `sentry-cli releases --org 'onekey_hq' --project 'ext' list`,
-    );
+    await exec(`sentry-cli releases --org 'onekey_hq' --project 'ext' list`);
   });
   return itWorked;
 }

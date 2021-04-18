@@ -147,7 +147,8 @@ class RestoreVaultPage extends Component {
                 this.props.history.goBack();
               }}
             >
-              <span>&lt; </span><span>{t('back')}</span>
+              <span>&lt; </span>
+              <span>{t('back')}</span>
             </a>
             <div className="import-account__title">
               {this.context.t('restoreAccountWithSeed')}
@@ -156,7 +157,12 @@ class RestoreVaultPage extends Component {
               {this.context.t('secretPhrase')}
             </div>
             <div className="import-account__input-wrapper">
-              <label className="import-account__input-label" style={{ marginBottom: '10px' }}>{t('walletSeed')}</label>
+              <label
+                className="import-account__input-label"
+                style={{ marginBottom: '10px' }}
+              >
+                {t('walletSeed')}
+              </label>
               {showSeedPhrase ? (
                 <textarea
                   className="import-account__secret-phrase"

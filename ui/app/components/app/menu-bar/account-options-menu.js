@@ -12,7 +12,7 @@ import {
   getCurrentNetwork,
   getRpcPrefsForCurrentProvider,
   getSelectedIdentity,
-  getCurrentChainId
+  getCurrentChainId,
 } from '../../../selectors';
 import { useI18nContext } from '../../../hooks/useI18nContext';
 import { useMetricEvent } from '../../../hooks/useMetricEvent';
@@ -60,7 +60,7 @@ export default function AccountOptionsMenu({ anchorElement, onClose }) {
 
   const { address } = selectedIdentity;
   const isRemovable = keyring.type !== 'HD Key Tree';
-  const isOfficeChain = [1, 3, 4, 5, 42].includes(+chainId);
+  const isOfficeChain = [1, 3, 4, 5, 42].includes(Number(chainId));
 
   return (
     <Menu
@@ -108,7 +108,7 @@ export default function AccountOptionsMenu({ anchorElement, onClose }) {
         }
         iconClassName="fas fa-external-link-alt"
       >
-        {!isOfficeChain ? t('viewinExplorer') : t('viewOnEtherscan')}
+        {isOfficeChain ? t('viewOnEtherscan') : t('viewinExplorer')}
       </MenuItem>
       <MenuItem
         data-testid="account-options-menu__connected-sites"

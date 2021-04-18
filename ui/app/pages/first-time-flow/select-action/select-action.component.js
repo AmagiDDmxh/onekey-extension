@@ -56,8 +56,10 @@ export default class SelectAction extends PureComponent {
                     {t('noAlreadyHaveSeed')}
                   </div>
                   <div className="select-action__button-text-small">
-                   <p>{t('importYourExisting')}</p>
-                   <p className="select-action__warning">{t('notUseHardware')}</p>
+                    <p>{t('importYourExisting')}</p>
+                    <p className="select-action__warning">
+                      {t('notUseHardware')}
+                    </p>
                   </div>
                 </div>
                 <Button

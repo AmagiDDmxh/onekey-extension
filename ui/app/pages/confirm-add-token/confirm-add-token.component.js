@@ -17,7 +17,7 @@ export default class ConfirmAddToken extends Component {
     addTokens: PropTypes.func,
     mostRecentOverviewPage: PropTypes.string.isRequired,
     pendingTokens: PropTypes.object,
-    contractMap: PropTypes.object
+    contractMap: PropTypes.object,
   };
 
   componentDidMount() {

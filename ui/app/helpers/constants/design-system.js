@@ -32,9 +32,9 @@ export const COLORS = {
   RINKEBY: 'rinkeby',
   GOERLI: 'goerli',
   TRANSPARENT: 'transparent',
-  HECO: "heco",
-  BSC: "bsc",
-  MATIC: "matic"
+  HECO: 'heco',
+  BSC: 'bsc',
+  MATIC: 'matic',
 };
 
 export const TYPOGRAPHY = {

@@ -20,7 +20,7 @@ import {
   MATIC,
   MATIC_CHAIN_ID,
   MATIC_RPC_URL,
-  MATIC_TICKER
+  MATIC_TICKER,
 } from '../../../../../shared/constants/network';
 
 const defaultNetworksData = [

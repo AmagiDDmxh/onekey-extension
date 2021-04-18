@@ -19,14 +19,14 @@ export default function IntroPopup({ onClose }) {
     properties: { source: 'Intro popup', active_currency: 'ETH' },
     category: 'swaps',
   });
-  const blogPostVisitedEvent = useNewMetricEvent({
-    event: 'Blog Post Visited ',
-    category: 'swaps',
-  });
-  const contractAuditVisitedEvent = useNewMetricEvent({
-    event: 'Contract Audit Visited',
-    category: 'swaps',
-  });
+  // const blogPostVisitedEvent = useNewMetricEvent({
+  //   event: 'Blog Post Visited ',
+  //   category: 'swaps',
+  // });
+  // const contractAuditVisitedEvent = useNewMetricEvent({
+  //   event: 'Contract Audit Visited',
+  //   category: 'swaps',
+  // });
   const productOverviewDismissedEvent = useNewMetricEvent({
     event: 'Product Overview Dismissed',
     category: 'swaps',

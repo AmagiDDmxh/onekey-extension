@@ -24,7 +24,7 @@ export const GOERLI_CHAIN_ID = '0x5';
 export const KOVAN_CHAIN_ID = '0x2a';
 export const HECO_CHAIN_ID = '0x80';
 export const BSC_CHAIN_ID = '0x38';
-export const MATIC_CHAIN_ID = '0x89'
+export const MATIC_CHAIN_ID = '0x89';
 
 /**
  * The largest possible chain ID we can handle.
@@ -42,27 +42,28 @@ export const BSC_DISPLAY_NAME = 'Bsc Mainnet';
 export const MATIC_DISPLAY_NAME = 'Matic Mainnet';
 
 export const INFURA_PROVIDER_TYPES = [ROPSTEN, RINKEBY, KOVAN, MAINNET, GOERLI];
-export const BUILDINT_PROVIDER_TYPES = [HECO, BSC, MATIC]
-export const SECURE_NETWORKS = [].concat(INFURA_PROVIDER_TYPES).concat(BUILDINT_PROVIDER_TYPES)
+export const BUILDINT_PROVIDER_TYPES = [HECO, BSC, MATIC];
+export const SECURE_NETWORKS = []
+  .concat(INFURA_PROVIDER_TYPES)
+  .concat(BUILDINT_PROVIDER_TYPES);
 
-export const HECO_RPC_URL = "https://heco1.onekey.so/rpc";
-export const HECO_TICKER = "HT";
-export const HECO_IMAGE = "./images/ht_logo.svg";
+export const HECO_RPC_URL = 'https://heco1.onekey.so/rpc';
+export const HECO_TICKER = 'HT';
+export const HECO_IMAGE = './images/ht_logo.svg';
 
-export const BSC_RPC_URL = "https://bsc1.onekey.so/rpc";
-export const BSC_TICKER = "BNB";
-export const BSC_IMAGE = "./images/bsc_logo.svg";
+export const BSC_RPC_URL = 'https://bsc1.onekey.so/rpc';
+export const BSC_TICKER = 'BNB';
+export const BSC_IMAGE = './images/bsc_logo.svg';
 
-export const MATIC_RPC_URL = "https://rpc-mainnet.matic.network";
+export const MATIC_RPC_URL = 'https://rpc-mainnet.matic.network';
 export const MATIC_TICKER = 'MATIC';
 export const MATIC_IMAGE = './images/matic_logo.svg';
-
 
 export const NETWORK_TYPE_TO_TICKER_MAP = {
   [HECO]: HECO_TICKER,
   [BSC]: BSC_TICKER,
   [MATIC]: MATIC_TICKER,
-}
+};
 
 export const TEST_CHAINS = [
   ROPSTEN_CHAIN_ID,
@@ -72,9 +73,27 @@ export const TEST_CHAINS = [
 ];
 
 export const NETWORK_TYPE_TO_ID_MAP = {
-  [MATIC]: { networkId: MATIC_NETWORK_ID, chainId: MATIC_CHAIN_ID, ticker: MATIC_TICKER, rpcUrl: MATIC_RPC_URL, image: MATIC_IMAGE },
-  [HECO]: { networkId: HECO_NETWORK_ID, chainId: HECO_CHAIN_ID, ticker: HECO_TICKER, rpcUrl: HECO_RPC_URL, image: HECO_IMAGE },
-  [BSC]: { networkId: BSC_NETWORK_ID, chainId: BSC_CHAIN_ID, ticker: BSC_TICKER, rpcUrl: BSC_RPC_URL, image: BSC_IMAGE },
+  [MATIC]: {
+    networkId: MATIC_NETWORK_ID,
+    chainId: MATIC_CHAIN_ID,
+    ticker: MATIC_TICKER,
+    rpcUrl: MATIC_RPC_URL,
+    image: MATIC_IMAGE,
+  },
+  [HECO]: {
+    networkId: HECO_NETWORK_ID,
+    chainId: HECO_CHAIN_ID,
+    ticker: HECO_TICKER,
+    rpcUrl: HECO_RPC_URL,
+    image: HECO_IMAGE,
+  },
+  [BSC]: {
+    networkId: BSC_NETWORK_ID,
+    chainId: BSC_CHAIN_ID,
+    ticker: BSC_TICKER,
+    rpcUrl: BSC_RPC_URL,
+    image: BSC_IMAGE,
+  },
   [ROPSTEN]: { networkId: ROPSTEN_NETWORK_ID, chainId: ROPSTEN_CHAIN_ID },
   [RINKEBY]: { networkId: RINKEBY_NETWORK_ID, chainId: RINKEBY_CHAIN_ID },
   [KOVAN]: { networkId: KOVAN_NETWORK_ID, chainId: KOVAN_CHAIN_ID },

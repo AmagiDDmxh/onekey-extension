@@ -2,8 +2,8 @@ import { connect } from 'react-redux';
 
 import { addTokens, clearPendingTokens } from '../../store/actions';
 import { getMostRecentOverviewPage } from '../../ducks/history/history';
+import { getContractMap } from '../../selectors/selectors';
 import ConfirmAddToken from './confirm-add-token.component';
-import { getContractMap } from "../../selectors/selectors"
 
 const mapStateToProps = (state) => {
   const {

@@ -142,7 +142,7 @@ export default class TransactionListItemDetails extends PureComponent {
     const { t } = this.context;
     const { chainId } = this.props;
     const { justCopied } = this.state;
-    const isOfficeChain = [1, 3, 4, 5, 42].includes(+chainId);
+    const isOfficeChain = [1, 3, 4, 5, 42].includes(Number(chainId));
     const {
       transactionGroup,
       primaryCurrency,
@@ -150,7 +150,7 @@ export default class TransactionListItemDetails extends PureComponent {
       showRetry,
       recipientEns,
       recipientAddress,
-      rpcPrefs: { blockExplorerUrl } = {},
+      // rpcPrefs: { blockExplorerUrl } = {},
       senderAddress,
       isEarliestNonce,
       senderNickname,
@@ -198,7 +198,9 @@ export default class TransactionListItemDetails extends PureComponent {
               <Tooltip
                 wrapperClassName="transaction-list-item-details__header-button"
                 containerClassName="transaction-list-item-details__header-button-tooltip-container"
-                title={!isOfficeChain ? t('viewinExplorer') : t('viewOnEtherscan')}
+                title={
+                  isOfficeChain ? t('viewOnEtherscan') : t('viewinExplorer')
+                }
               >
                 <Button
                   type="raised"

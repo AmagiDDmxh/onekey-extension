@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
-import { createTokenTrackerLink } from '@metamask/etherscan-link';
+// import { createTokenTrackerLink } from '@metamask/etherscan-link';
 
 import TransactionList from '../../../components/app/transaction-list';
 import { TokenOverview } from '../../../components/app/wallet-overview';
@@ -13,9 +13,9 @@ import {
 import { DEFAULT_ROUTE } from '../../../helpers/constants/routes';
 import { showModal } from '../../../store/actions';
 
+import { getEtherscanNetwork } from '../../../../lib/etherscan-prefix-for-network';
 import AssetNavigation from './asset-navigation';
 import TokenOptions from './token-options';
-import { getEtherscanNetwork } from "../../../../lib/etherscan-prefix-for-network"
 
 export default function TokenAsset({ token }) {
   const dispatch = useDispatch();
@@ -36,7 +36,7 @@ export default function TokenAsset({ token }) {
               dispatch(showModal({ name: 'HIDE_TOKEN_CONFIRMATION', token }))
             }
             onViewEtherscan={() => {
-              let prefix = getEtherscanNetwork(network);
+              const prefix = getEtherscanNetwork(network);
               const url = `${prefix}/address/${token.address}`;
               global.platform.openTab({ url });
             }}

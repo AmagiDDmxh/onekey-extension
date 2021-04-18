@@ -1,8 +1,8 @@
 import { connect } from 'react-redux';
 import Fuse from 'fuse.js';
 
+import { contractTokens } from '../../../../tokens';
 import TokenSearch from './token-search.component';
-import { contractTokens } from "../../../../tokens"
 
 const fuse = new Fuse([], {
   shouldSort: true,
@@ -19,13 +19,17 @@ const fuse = new Fuse([], {
 
 const mapStateToProps = (state) => {
   const {
-    metamask: { provider: { type } },
+    metamask: {
+      provider: { type },
+    },
   } = state;
-  const tokens = contractTokens[type] ? contractTokens[type] : contractTokens.eth;
+  const tokens = contractTokens[type]
+    ? contractTokens[type]
+    : contractTokens.eth;
   fuse.setCollection(tokens);
   return {
     tokens,
-    fuse
+    fuse,
   };
 };
 

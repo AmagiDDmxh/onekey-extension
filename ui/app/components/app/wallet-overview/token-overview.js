@@ -7,16 +7,12 @@ import Identicon from '../../ui/identicon';
 import Tooltip from '../../ui/tooltip';
 import CurrencyDisplay from '../../ui/currency-display';
 import { I18nContext } from '../../../contexts/i18n';
-import {
-  SEND_ROUTE,
-} from '../../../helpers/constants/routes';
-import {
-  useMetricEvent,
-} from '../../../hooks/useMetricEvent';
+import { SEND_ROUTE } from '../../../helpers/constants/routes';
+import { useMetricEvent } from '../../../hooks/useMetricEvent';
 import { useTokenTracker } from '../../../hooks/useTokenTracker';
 import { useTokenFiatAmount } from '../../../hooks/useTokenFiatAmount';
 import { updateSendToken } from '../../../store/actions';
-import { openSwap } from "../../../../lib/swap-utils"
+import { openSwap } from '../../../../lib/swap-utils';
 import {
   getAssetImages,
   getCurrentChainId,
@@ -51,8 +47,10 @@ const TokenOverview = ({ className, token }) => {
     token.symbol,
   );
   const chainId = useSelector(getCurrentChainId);
-  const handleSwap = useCallback(() => openSwap(token.address), [token.address]);
-  const isSwapEnable = [1, 42, 56].includes(+chainId);
+  const handleSwap = useCallback(() => openSwap(token.address), [
+    token.address,
+  ]);
+  const isSwapEnable = [1, 42, 56].includes(Number(chainId));
 
   return (
     <WalletOverview

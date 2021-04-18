@@ -1294,8 +1294,8 @@ export default class MetamaskController extends EventEmitter {
     index,
     deviceName,
     hdPath,
-    hdPathDescription
-    ) {
+    hdPathDescription,
+  ) {
     const keyring = await this.getKeyringForDevice(deviceName, hdPath);
 
     keyring.setAccountToUnlock(index);
@@ -1305,7 +1305,9 @@ export default class MetamaskController extends EventEmitter {
     this.preferencesController.setAddresses(newAccounts);
     newAccounts.forEach((address) => {
       if (!oldAccounts.includes(address)) {
-        const label = `${deviceName[0].toUpperCase()}${deviceName.slice(1)} ${parseInt(index, 10) + 1} ${hdPathDescription || ''}`.trim();
+        const label = `${deviceName[0].toUpperCase()}${deviceName.slice(1)} ${
+          parseInt(index, 10) + 1
+        } ${hdPathDescription || ''}`.trim();
         this.preferencesController.setAccountLabel(address, label);
         // Select the account
         this.preferencesController.setSelectedAddress(address);
@@ -1953,7 +1955,11 @@ export default class MetamaskController extends EventEmitter {
     const mux = setupMultiplex(connectionStream);
     // connect features
     this.setupControllerConnection(mux.createStream('onekey-controller'));
-    this.setupProviderConnection(mux.createStream('onekey-provider'), sender, true);
+    this.setupProviderConnection(
+      mux.createStream('onekey-provider'),
+      sender,
+      true,
+    );
   }
 
   /**

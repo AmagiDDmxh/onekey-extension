@@ -133,7 +133,11 @@ export default class EnsInput extends Component {
   };
 
   onPaste = (event) => {
-    if (event.clipboardData && event.clipboardData.items && event.clipboardData.items[0]) {
+    if (
+      event.clipboardData &&
+      event.clipboardData.items &&
+      event.clipboardData.items[0]
+    ) {
       event.clipboardData.items[0].getAsString((text) => {
         if (isValidAddress(text)) {
           this.props.onPaste(text);

@@ -9,8 +9,10 @@ import createInfuraMiddleware from 'eth-json-rpc-infura';
 import BlockTracker from 'eth-block-tracker';
 import createFetchMiddleware from 'eth-json-rpc-middleware/fetch';
 
-import { NETWORK_TYPE_TO_ID_MAP } from '../../../../shared/constants/network';
-import { MAINNET } from '../../../../shared/constants/network';
+import {
+  NETWORK_TYPE_TO_ID_MAP,
+  MAINNET,
+} from '../../../../shared/constants/network';
 
 export default function createInfuraClient({ network, projectId }) {
   const infuraMiddleware =
@@ -24,7 +26,7 @@ export default function createInfuraClient({ network, projectId }) {
         });
   const infuraProvider = providerFromMiddleware(infuraMiddleware);
   const blockTracker = new BlockTracker({ provider: infuraProvider });
-  
+
   const networkMiddleware = mergeMiddleware([
     createNetworkAndChainIdMiddleware({ network }),
     createBlockCacheMiddleware({ blockTracker }),

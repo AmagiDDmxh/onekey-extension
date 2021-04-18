@@ -265,7 +265,7 @@ export default class PreferencesController {
       }
       // add missing identity
       const identityCount = Object.keys(identities).length;
-      
+
       // accountTokens[address] = {};
       // accountHiddenTokens[address] = {};
       identities[address] = { name: `Account ${identityCount + 1}`, address };

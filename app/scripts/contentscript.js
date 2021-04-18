@@ -22,9 +22,9 @@ const INPAGE = 'onekey-inpage';
 const PROVIDER = 'onekey-provider';
 
 // TODO:LegacyProvider: Delete
-const LEGACY_CONTENT_SCRIPT = 'contentscript';
-const LEGACY_INPAGE = 'inpage';
-const LEGACY_PROVIDER = 'provider';
+// const LEGACY_CONTENT_SCRIPT = 'contentscript';
+// const LEGACY_INPAGE = 'inpage';
+// const LEGACY_PROVIDER = 'provider';
 const LEGACY_PUBLIC_CONFIG = 'publicConfig';
 
 if (shouldInjectProvider()) {

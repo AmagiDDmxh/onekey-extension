@@ -52,6 +52,21 @@
   "addAlias": {
     "message": "添加别名"
   },
+  "addEthereumChainConfirmationDescription": {
+    "message": "这将允许在Onekey中使用该网络"
+  },
+  "addEthereumChainConfirmationRisks": {
+    "message": "Onekey不会验证自定义网络"
+  },
+  "addEthereumChainConfirmationRisksLearnMore": {
+    "message": "学习更多 $1."
+  },
+  "addEthereumChainConfirmationRisksLearnMoreLink": {
+    "message": "Matic Mainnet"
+  },
+  "addEthereumChainConfirmationTitle": {
+    "message": "允许此网站添加网络"
+  },
   "addNetwork": {
     "message": "添加网络"
   },
@@ -150,6 +165,9 @@
   "approve": {
     "message": "批准消费限额"
   },
+  "approveButtonText": {
+    "message": "同意"
+  },
   "approveSpendLimit": {
     "message": "批准 $1 消费限额",
     "description": "The token symbol that is being approved"
@@ -214,6 +232,9 @@
   "blockExplorerUrl": {
     "message": "区块浏览器"
   },
+  "blockExplorerUrlDefinition": {
+    "message": "区块链浏览器"
+  },
   "blockExplorerView": {
     "message": "通过 $1 查看账户",
     "description": "$1 replaced by URL for custom block explorer"
@@ -224,11 +245,11 @@
   "browserNotSupported": {
     "message": "您的浏览器不支持该功能……"
   },
+  "bsc": {
+    "message": "币安智能链 BSC 主网"
+  },
   "builtInCalifornia": {
     "message": "OneKey在中国设计和制造。"
-  },
-  "thankToMetaMask": {
-    "message": "由 MetaMask 提供源码支持"
   },
   "buy": {
     "message": "购买"
@@ -256,6 +277,9 @@
   },
   "chainId": {
     "message": "链 ID"
+  },
+  "chainIdDefinition": {
+    "message": "chainId 定义"
   },
   "chromeRequiredForHardwareWallets": {
     "message": "您需要在谷歌浏览器（Google Chrome）上使用 OneKey 才能连接到您的硬件钱包。"
@@ -343,8 +367,14 @@
   "connectingTo": {
     "message": "正在连接 $1"
   },
+  "connectingToBsc": {
+    "message": "正在连接到 币安智能链 BSC 主网"
+  },
   "connectingToGoerli": {
     "message": "正在连接 Goerli 测试网络"
+  },
+  "connectingToHeco": {
+    "message": "正在连接到 火币生态链 HECO 主网"
   },
   "connectingToKovan": {
     "message": "正在连接到 Kovan 测试网络"
@@ -352,20 +382,14 @@
   "connectingToMainnet": {
     "message": "正在连接到以太坊 Ethereum 主网"
   },
+  "connectingToMatic": {
+    "message": "正在连接到 Matic 主网"
+  },
   "connectingToRinkeby": {
     "message": "正在连接到 Rinkeby 测试网络"
   },
   "connectingToRopsten": {
     "message": "正在连接到 Ropsten 测试网络"
-  },
-  "connectingToBsc": {
-    "message": "正在连接到 币安智能链 BSC 主网"
-  },
-  "connectingToMatic": {
-    "message": "正在连接到 Matic 主网"
-  },
-  "connectingToHeco": {
-    "message": "正在连接到 火币生态链 HECO 主网"
   },
   "contactUs": {
     "message": "联系我们"
@@ -417,6 +441,12 @@
   },
   "currencyConversion": {
     "message": "货币转换"
+  },
+  "currencySymbol": {
+    "message": "货币符号"
+  },
+  "currencySymbolDefinition": {
+    "message": "货币符号"
   },
   "currentAccountNotConnected": {
     "message": "您的当前账户没有连接"
@@ -775,6 +805,10 @@
   "hardwareWalletConnected": {
     "message": "已连接的硬件钱包"
   },
+  "hardwareWalletLegacyDescription": {
+    "message": "(legacy)",
+    "description": "Text representing the MEW path"
+  },
   "hardwareWallets": {
     "message": "连接硬件设备"
   },
@@ -783,6 +817,9 @@
   },
   "havingTroubleConnecting": {
     "message": "连接出现问题？"
+  },
+  "heco": {
+    "message": "火币生态链 HECO 主网"
   },
   "here": {
     "message": "这里",
@@ -953,6 +990,9 @@
   "mainnet": {
     "message": "以太坊 Ethereum 主网络"
   },
+  "matic": {
+    "message": "Matic 主网"
+  },
   "max": {
     "message": "最大"
   },
@@ -1039,7 +1079,13 @@
   "negativeETH": {
     "message": "不能发负值的 ETH。"
   },
+  "networkDetails": {
+    "message": "网络详情"
+  },
   "networkName": {
+    "message": "网络名称"
+  },
+  "networkNameDefinition": {
     "message": "网络名称"
   },
   "networkSettingsChainIdDescription": {
@@ -1047,6 +1093,12 @@
   },
   "networkSettingsDescription": {
     "message": "添加和编辑自定义 RPC 网络"
+  },
+  "networkURL": {
+    "message": "网络 URL"
+  },
+  "networkURLDefinition": {
+    "message": "网络 URL 值"
   },
   "networks": {
     "message": "网络"
@@ -1131,6 +1183,9 @@
   "notEnoughGas": {
     "message": "燃料不足"
   },
+  "notUseHardware": {
+    "message": "请勿导入OneKey硬件设备内的助记词"
+  },
   "ofTextNofM": {
     "message": "/"
   },
@@ -1170,6 +1225,9 @@
   },
   "origin": {
     "message": "来源"
+  },
+  "ownedOnekey": {
+    "message": "已经拥有 Onekey 硬件设备"
   },
   "parameters": {
     "message": "参数"
@@ -1423,6 +1481,9 @@
   },
   "selectAnAccount": {
     "message": "选择一个账户"
+  },
+  "selectAnAccountAlreadyConnected": {
+    "message": "This account has already been connected to MetaMask"
   },
   "selectAnAccountHelp": {
     "message": "选择在 OneKey 中查看的账户"
@@ -1880,11 +1941,23 @@
   "swapsViewInActivity": {
     "message": "在活动中查看"
   },
+  "switchEthereumChainConfirmationDescription": {
+    "message": "这将把Onekey中选定的网络切换到以前添加的网络: "
+  },
+  "switchEthereumChainConfirmationTitle": {
+    "message": "允许该站点切换网络"
+  },
+  "switchNetwork": {
+    "message": "切换网络"
+  },
   "switchNetworks": {
     "message": "切换网络"
   },
   "switchToThisAccount": {
     "message": "切换到该账户"
+  },
+  "switchingNetworksCancelsPendingConfirmations": {
+    "message": "切换网络将会导致未完成的交易被取消"
   },
   "symbol": {
     "message": "符号"
@@ -1930,6 +2003,9 @@
   },
   "testFaucet": {
     "message": "测试水管"
+  },
+  "thankToMetaMask": {
+    "message": "由 MetaMask 提供源码支持"
   },
   "thisWillCreate": {
     "message": "将为你生成新的助记词来创建主钱包"
@@ -2144,81 +2220,5 @@
   },
   "zeroGasPriceOnSpeedUpError": {
     "message": "加速时无燃料价格"
-  },
-  "heco": {
-    "message": "火币生态链 HECO 主网"
-  },
-  "bsc": {
-    "message": "币安智能链 BSC 主网"
-  },
-  "ownedOnekey": {
-    "message": "已经拥有 Onekey 硬件设备"
-  },
-  "matic": {
-    "message": "Matic 主网"
-  },
-  "addEthereumChainConfirmationTitle": {
-    "message": "允许此网站添加网络"
-  },
-  "addEthereumChainConfirmationDescription": {
-    "message": "这将允许在Onekey中使用该网络"
-  },
-  "addEthereumChainConfirmationRisks": {
-    "message": "Onekey不会验证自定义网络"
-  },
-  "addEthereumChainConfirmationRisksLearnMore": {
-    "message": "学习更多 $1."
-  },
-  "addEthereumChainConfirmationRisksLearnMoreLink": {
-    "message": "Matic Mainnet"
-  },
-  "networkDetails": {
-    "message": "网络详情"
-  },
-  "networkNameDefinition": {
-    "message": "网络名称"
-  },
-  "networkURL": {
-    "message": "网络 URL"
-  },
-  "networkURLDefinition": {
-    "message": "网络 URL 值"
-  },
-  "chainIdDefinition": {
-    "message": "chainId 定义"
-  },
-  "currencySymbol": {
-    "message": "货币符号"
-  },
-  "currencySymbolDefinition": {
-    "message": "货币符号"
-  },
-  "blockExplorerUrlDefinition": {
-    "message": "区块链浏览器"
-  },
-  "approveButtonText": {
-    "message": "同意"
-  },
-  "switchEthereumChainConfirmationTitle": {
-    "message": "允许该站点切换网络"
-  },
-  "switchEthereumChainConfirmationDescription": {
-    "message": "这将把Onekey中选定的网络切换到以前添加的网络: "
-  },
-  "switchNetwork": {
-    "message": "切换网络"
-  },
-  "switchingNetworksCancelsPendingConfirmations": {
-    "message": "切换网络将会导致未完成的交易被取消"
-  },
-  "hardwareWalletLegacyDescription": {
-    "message": "(legacy)",
-    "description": "Text representing the MEW path"
-  },
-  "selectAnAccountAlreadyConnected": {
-    "message": "This account has already been connected to MetaMask"
-  },
-  "notUseHardware": {
-    "message": "请勿导入OneKey硬件设备内的助记词"
   }
 }
