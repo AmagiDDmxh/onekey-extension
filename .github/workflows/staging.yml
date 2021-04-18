@@ -3,8 +3,9 @@ name: 'staging-prerelease'
 
 on:
   push:
-    branches:
-      - staging
+    tags:
+      - 'v*.*.*-beta-?*'
+
 
 jobs:
   staging-prerelease:
@@ -36,14 +37,14 @@ jobs:
           path: 'node_modules'
           key: ${{ runner.os }}-yarn-node-modules${{ hashFiles('**/yarn.lock') }}
           
-      - name: Linting
-        run: 'yarn lint'
-
       - name: Install Dependiences
         run: 'yarn install --frozen-lockfile && yarn allow-scripts'
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Linting
+        run: 'yarn lint'
+          
       - name: Building Production
         run: 'yarn dist'
 
